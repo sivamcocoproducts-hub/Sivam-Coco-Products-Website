@@ -82,33 +82,62 @@ function prevSlide() {
     changeSlide(prev, 'prev');
 }
 
-// Event listeners
-if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+// Auto-play functionality
+function startAutoplay() {
+    stopAutoplay(); // Clear any existing timer
+    autoplayTimer = setInterval(nextSlide, slideInterval);
+}
+
+function stopAutoplay() {
+    if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+    }
+}
+
+// Event listeners with autoplay restart
+if (prevBtn) prevBtn.addEventListener('click', () => {
+    prevSlide();
+    startAutoplay();
+});
+
+if (nextBtn) nextBtn.addEventListener('click', () => {
+    nextSlide();
+    startAutoplay();
+});
 
 // Indicator click events
 indicators.forEach((indicator, index) => {
     indicator.addEventListener('click', () => {
         changeSlide(index + 1);
+        startAutoplay();
     });
 });
 
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') prevSlide();
-    if (e.key === 'ArrowRight') nextSlide();
+    if (e.key === 'ArrowLeft') {
+        prevSlide();
+        startAutoplay();
+    }
+    if (e.key === 'ArrowRight') {
+        nextSlide();
+        startAutoplay();
+    }
 });
 
 // Auto-play functionality
 function startAutoplay() {
+    stopAutoplay(); // Clear any existing timer
     autoplayTimer = setInterval(nextSlide, slideInterval);
 }
 
 function stopAutoplay() {
-    clearInterval(autoplayTimer);
+    if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+    }
 }
 
-// Start autoplay
+// Start autoplay on page load
 startAutoplay();
 
 // Pause on hover

@@ -375,6 +375,12 @@ body.preloader-active {
     transition: var(--transition-smooth);
 }
 
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
 .logo i {
     font-size: 36px;
     color: var(--leaf-green);
@@ -535,7 +541,7 @@ body.preloader-active {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 140px 30px 100px;
+    padding: 180px 30px 100px;
 }
 
 /* Slider Container */
@@ -1310,6 +1316,7 @@ body.preloader-active {
     box-shadow: 0 15px 40px rgba(60, 122, 60, 0.4);
     position: relative;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .btn-hero-primary::before {
@@ -1356,6 +1363,7 @@ body.preloader-active {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.4s ease;
+    text-decoration: none;
 }
 
 .btn-hero-outline:hover {
@@ -1531,7 +1539,7 @@ body.preloader-active {
 
 .experience-section {
     padding: 80px 0;
-    background: #6d3c17; /* Updated per request */
+    background: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070') center center/cover no-repeat fixed;
     position: relative;
     overflow: hidden;
     color: #ffffff;
@@ -1544,9 +1552,7 @@ body.preloader-active {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Subtle pattern to keep texture but low contrast on dark bg */
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10 Q60 20 50 30 Q40 20 50 10 M50 30 L50 50 M40 50 L60 50' stroke='%23FFFFFF' stroke-width='1' fill='none' opacity='0.03'/%3E%3C/svg%3E");
-    opacity: 1;
+    background: rgba(109, 60, 23, 0.85);
     pointer-events: none;
 }
 
@@ -1556,7 +1562,7 @@ body.preloader-active {
     z-index: 2;
 }
 
-.experience-number {
+.year-number {
     font-family: var(--font-heading);
     font-size: 120px;
     font-weight: 800;
@@ -1618,6 +1624,7 @@ body.preloader-active {
     line-height: 1.8;
     color: var(--text-dark);
     margin-bottom: 25px;
+    text-align: justify;
 }
 
 .contact-callout {
@@ -3129,6 +3136,12 @@ body.preloader-active {
     margin-bottom: 20px;
 }
 
+.footer-logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
 .footer-logo i {
     font-size: 40px;
     color: var(--leaf-green);
@@ -3269,7 +3282,7 @@ body.preloader-active {
 .scroll-top {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    left: 30px;
     width: 55px;
     height: 55px;
     background: var(--gold-accent);
@@ -3383,7 +3396,7 @@ body.preloader-active {
     justify-content: center;
     font-size: 28px;
     color: white;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     text-decoration: none;
     animation: floatPulse 2s infinite;
@@ -3396,24 +3409,24 @@ body.preloader-active {
 
 /* Email Button */
 .email-float {
-    background: linear-gradient(135deg, #EA4335, #C5221F);
-    box-shadow: 0 8px 25px rgba(234, 67, 53, 0.4);
+    background: linear-gradient(135deg, #D14836, #B23121);
+    box-shadow: 0 6px 20px rgba(209, 72, 54, 0.25);
 }
 
 .email-float:hover {
-    box-shadow: 0 12px 35px rgba(234, 67, 53, 0.6);
-    background: linear-gradient(135deg, #C5221F, #EA4335);
+    box-shadow: 0 10px 30px rgba(209, 72, 54, 0.4);
+    background: linear-gradient(135deg, #B23121, #D14836);
 }
 
 /* Phone Button */
 .phone-float {
-    background: linear-gradient(135deg, #4285F4, #1967D2);
-    box-shadow: 0 8px 25px rgba(66, 133, 244, 0.4);
+    background: linear-gradient(135deg, #3B78E7, #2A5FCE);
+    box-shadow: 0 6px 20px rgba(59, 120, 231, 0.25);
 }
 
 .phone-float:hover {
-    box-shadow: 0 12px 35px rgba(66, 133, 244, 0.6);
-    background: linear-gradient(135deg, #1967D2, #4285F4);
+    box-shadow: 0 10px 30px rgba(59, 120, 231, 0.4);
+    background: linear-gradient(135deg, #2A5FCE, #3B78E7);
 }
 
 .phone-float i {
@@ -3422,13 +3435,13 @@ body.preloader-active {
 
 /* WhatsApp Button */
 .whatsapp-float {
-    background: linear-gradient(135deg, #25D366, #128C7E);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    background: linear-gradient(135deg, #1EBE5D, #0F7D47);
+    box-shadow: 0 6px 20px rgba(30, 190, 93, 0.25);
 }
 
 .whatsapp-float:hover {
-    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
-    background: linear-gradient(135deg, #128C7E, #25D366);
+    box-shadow: 0 10px 30px rgba(30, 190, 93, 0.4);
+    background: linear-gradient(135deg, #0F7D47, #1EBE5D);
 }
 
 .whatsapp-float i {
@@ -3935,12 +3948,20 @@ body.preloader-active {
         font-size: 24px;
     }
     
+    .logo-img {
+        height: 40px;
+    }
+    
     .logo i {
         font-size: 28px;
     }
     
+    .footer-logo-img {
+        height: 50px;
+    }
+    
     .hero-banner-parallax {
-        padding: 100px 15px 60px;
+        padding: 120px 15px 60px;
     }
     
     /* Slider Controls Mobile */
